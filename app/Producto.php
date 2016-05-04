@@ -11,6 +11,7 @@ class Producto extends Model
         'nombre',
         'precio',
         'tipo',
+        'unidad',
     ];
 
 }
