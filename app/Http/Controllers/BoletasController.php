@@ -96,11 +96,9 @@ class BoletasController extends Controller
     public function agregar_producto(Request $request,$id)
     {
         $boleta = Boleta::find($id);
-        if(is_null($boleta->productos()->find($request->get('producto_id')))||true)
-        {
-            $boleta->productos()->attach($request->get('producto_id'),['cantidad'=> $request->get('cantidad')]);
-        }
+        $boleta->productos()->attach($request->get('producto_id'),['cantidad'=> $request->get('cantidad')]);
+
         //$boleta->productos()->updateExistingPivot($request->get('producto_id'),['cantidad'=> $request->get('cantidad')]);
-        
+        return redirect()->route('boletas.show',[$id]);
     }
 }
