@@ -16,8 +16,8 @@ class Producto extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->integer('precio');
-            $table->string('tipo');
             $table->string('unidad');
+            $table->unsignedInteger('tipo_producto_id');
             $table->timestamps();
         });
     }
