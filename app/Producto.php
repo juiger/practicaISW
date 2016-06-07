@@ -10,8 +10,13 @@ class Producto extends Model
     protected $fillable = [
         'nombre',
         'precio',
-        'tipo',
         'unidad',
+        'tipo_producto_id'
     ];
 
+    public function tipo_producto()
+    {
+        return $this->belongsTo('App\TipoProducto');
+    }
+    
 }

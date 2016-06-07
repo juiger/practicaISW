@@ -15,7 +15,7 @@ class ProductosSeeder extends Seeder
         Producto::create([
             'nombre'=>'Pancito',
             'precio'=>'300',
-            'tipo'=>'amasado',
+            'tipo_producto_id'=>'1',
             'unidad'=>'kg',
         ]);
     }
