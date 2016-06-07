@@ -9,7 +9,7 @@
     <tr>
         <td>{{ $producto->nombre }}</td>
         <td>{{ $producto->precio }}</td>
-        <td>{{ $producto->tipo }}</td>
+        <td>{{ $producto->tipo_producto->nombre or 'ERROR' }}</td>
         <td>{{ $producto->unidad }}</td>
     </tr>
     @endforeach
