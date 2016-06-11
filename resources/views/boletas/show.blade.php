@@ -22,6 +22,11 @@
                     <td>= ${{$producto->pivot->cantidad*$producto->precio}}</td>
                 </tr>
             @endforeach
+                <tr><td class="text-right">______________________</td><td>____________</td></tr>
+                <tr>
+                    <th class="text-right">Total</th>
+                    <td>= {{$boleta->total}}</td>
+                </tr>
             </table>
         </div>
     </div>
