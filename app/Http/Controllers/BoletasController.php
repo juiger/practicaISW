@@ -84,7 +84,8 @@ class BoletasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Boleta::destroy($id);
+        return redirect()->route('boletas.index');
     }
 
     public function vista_agregar_producto($id)
@@ -97,8 +98,6 @@ class BoletasController extends Controller
     {
         $boleta = Boleta::find($id);
         $boleta->productos()->attach($request->get('producto_id'),['cantidad'=> $request->get('cantidad')]);
-
-        //$boleta->productos()->updateExistingPivot($request->get('producto_id'),['cantidad'=> $request->get('cantidad')]);
         return redirect()->route('boletas.show',[$id]);
     }
 }
