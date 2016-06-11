@@ -1,13 +1,36 @@
-<h1>Producto</h1>
-<h3>Nombre</h3>
-<h4>{{$producto->nombre}}</h4>
-<h3>Precio</h3>
-<h4>{{$producto->precio}}</h4>
-<h3>Tipo</h3>
-<h4>{{$producto->tipo}}</h4>
-<h3>Unidad de venta</h3>
-<h4>{{$producto->unidad}}</h4>
-
-{!! Form::model($producto, array('route' => array('productos.destroy', $producto->id),'method'=>'DELETE')) !!}
-{!! Form::submit('Eliminar') !!}
-{!! Form::close() !!}
+@extends('master')
+@section('titulo')
+    Producto
+@endsection
+@section('contenido')
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>Detalles</h4>
+        </div>
+        <div class="panel-body">
+            <table style="white-space: pre">
+                <tbody>
+                <tr><th class="text-right">Nombre: </th><td class="text-info">{{$producto->nombre}}</td></tr>
+                <tr><th class="text-right">Precio: </th><td class="text-info">{{$producto->precio}}</td></tr>
+                <tr><th class="text-right">Tipo: </th><td class="text-info">{{$producto->tipo}}</td></tr>
+                <tr><th class="text-right">Medida: </th><td class="text-info">{{$producto->unidad}}</td></tr>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        {!! Form::model($producto, array('route' => array('productos.destroy', $producto->id),'method'=>'DELETE')) !!}
+                        {!! Form::submit('Eliminar',['class'=>'btn btn-danger','onClick'=>'return confirm(\'Está Seguro?\')']) !!}
+                        {!! Form::close() !!}
+                    </td>
+                    <td>
+                        <a class="btn btn-warning">Editar</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+@endsection
