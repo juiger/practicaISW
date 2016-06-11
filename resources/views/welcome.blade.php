@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>Proyecto Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -36,6 +36,9 @@
         </style>
     </head>
     <body>
+    <div>
+        <a href="{{route('productos.index')}}">Entrar</a>
+    </div>
         <div class="container">
             <div class="content">
                 <div class="title">Práctica ISW</div>
