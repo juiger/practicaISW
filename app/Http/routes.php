@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('boletas/{boleta}/agregar_producto','BoletasController@vista_agregar_producto')->name('boletas.vista_agregar_producto');
 Route::post('boletas/{boleta}/agregar_producto','BoletasController@agregar_producto')->name('boletas.agregar_producto');
