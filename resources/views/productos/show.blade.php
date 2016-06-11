@@ -19,14 +19,14 @@
         <div class="panel-footer">
             <table>
                 <tbody>
-                <tr>
-                    <td>
+                <tr class="row">
+                    <td class="col-md-1">
                         {!! Form::model($producto, array('route' => array('productos.destroy', $producto->id),'method'=>'DELETE')) !!}
                         {!! Form::submit('Eliminar',['class'=>'btn btn-danger','onClick'=>'return confirm(\'Está Seguro?\')']) !!}
                         {!! Form::close() !!}
                     </td>
-                    <td>
-                        <a class="btn btn-warning">Editar</a>
+                    <td class="col-md-1">
+                        <a href="{{route('productos.show',[$producto->id])}}" class="btn btn-warning">Editar</a>
                     </td>
                 </tr>
                 </tbody>
