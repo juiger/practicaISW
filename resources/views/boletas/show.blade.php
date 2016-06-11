@@ -28,8 +28,11 @@
     <div class="panel-footer">
         <table>
             <tbody>
-            <tr>
-                <td>
+            <tr class="row">
+                <td class="col-md-1">
+                    <a href="{{route('boletas.vista_agregar_producto',[$boleta->id])}}" class="btn btn-success">Agrega Productos</a>
+                </td>
+                <td class="col-md-1">
                     {!! Form::model($boleta, array('route' => array('boletas.destroy', $boleta->id),'method'=>'DELETE')) !!}
                     {!! Form::submit('Eliminar',['class'=>'btn btn-danger','onClick'=>'return confirm(\'Está Seguro?\')']) !!}
                     {!! Form::close() !!}
