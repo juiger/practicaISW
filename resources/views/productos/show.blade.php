@@ -26,7 +26,7 @@
                         {!! Form::close() !!}
                     </td>
                     <td class="col-md-1">
-                        <a href="{{route('productos.show',[$producto->id])}}" class="btn btn-warning">Editar</a>
+                        <a href="{{route('productos.edit',[$producto->id])}}" class="btn btn-warning">Editar</a>
                     </td>
                 </tr>
                 </tbody>
