@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateProductoRequest;
 use App\Producto;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,7 @@ class ProductosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateProductoRequest $request)
     {
         Producto::create($request->all());
         return redirect()->route('productos.index');
