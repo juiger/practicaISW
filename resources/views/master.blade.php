@@ -32,6 +32,15 @@
     </div>
     <div class="col-md-10">
         <h1 class="text-center">@yield('titulo')</h1>
+        @if(count($errors)>0)
+            <div>
+                <ul class="alert alert-danger">
+                    @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         @yield('contenido')
     </div>
 
