@@ -19,7 +19,8 @@ class Producto extends Model
         return $this->belongsTo('App\TipoProducto');
     }
 
-    public function getTipoAttribute(){
+    public function getTipoAttribute()
+    {
         return !is_null($this->tipo_producto)?$this->tipo_producto->nombre:'ERROR';
     }
     
