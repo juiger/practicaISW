@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Boleta;
+use App\Http\Requests\CreateBoletaRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -36,7 +37,7 @@ class BoletasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateBoletaRequest $request)
     {
         Boleta::create($request->all());
         return redirect()->route('boletas.index');
