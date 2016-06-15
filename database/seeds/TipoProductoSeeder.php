@@ -15,5 +15,6 @@ class TipoProductoSeeder extends Seeder
         TipoProducto::create(['nombre'=>'Amasandería']);
         TipoProducto::create(['nombre'=>'Rotisería']);
         TipoProducto::create(['nombre'=>'Dulces']);
+        TipoProducto::create(['nombre'=>'Misc']);
     }
 }
