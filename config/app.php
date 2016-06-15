@@ -158,6 +158,9 @@ return [
 
         // Collective
         Collective\Html\HtmlServiceProvider::class,
+
+        // Custom Service Prodiver
+        App\Providers\CustomValidatorsServiceProvider::class,
     ],
 
     /*
