@@ -31,6 +31,9 @@
         </div>
     </div>
     <div class="col-md-10">
+        @if(auth()->user() != null)
+        <p>{{auth()->user()->nombre}}</p>
+        @endif
         <h1 class="text-center">@yield('titulo')</h1>
         @if(count($errors)>0)
             <div>
